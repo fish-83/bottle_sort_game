@@ -58,7 +58,7 @@ function render() {
   });
 
   if (isGameCleared()) {
-    document.getElementById("message").textContent = "🎉 ゲームクリア！おめでとう！";
+    document.getElementById("message").textContent = "🎉 PERFECT!!";
   } else {
     document.getElementById("message").textContent = "";
   }
