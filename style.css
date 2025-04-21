@@ -14,16 +14,32 @@ body {
   width: 60px;
   height: 240px;
   border: 2px solid #333;
+  border-radius: 20px 20px 8px 8px; /* 丸い肩と底 */
   display: flex;
   flex-direction: column-reverse;
   justify-content: flex-start;
-  background: white;
+  background: linear-gradient(to top, #fefefe 60%, #ddd);
   cursor: pointer;
-  border-radius: 10px 10px 0 0;
-  background: linear-gradient(to top, #fff 70%, #ccc);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    inset 0 -5px 10px rgba(0, 0, 0, 0.1),
+    0 4px 6px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
   transition: transform 0.2s ease;
 }
+.bottle::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 15px;
+  width: 30px;
+  height: 20px;
+  background: #bbb;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+
 .bottle:hover {
   transform: scale(1.05);
 }
